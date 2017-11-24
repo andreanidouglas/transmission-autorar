@@ -11,8 +11,9 @@ for file in $files; do
     #echo -e "$file -- $directory" 
     extracted=$(find $directory -name "extracted")
     if [ -z $extracted ]; then
-        7z x \"$WORK_DIR$file\" -o\"$directory\" -y
-        touch $directory\/extracted
+	echo #$file 
+        echo /usr/bin/7z x \"$WORK_DIR$file\" -o\"$directory\" -y
+        echo touch $directory\/extracted
     fi
 
 
